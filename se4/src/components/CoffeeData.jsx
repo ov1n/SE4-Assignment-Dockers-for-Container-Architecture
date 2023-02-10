@@ -61,7 +61,7 @@ const CoffeeData = ({ data }) => {
                   {data.map((item, index) => (
                     <Tr key={index}>
                       <Td>{item.name}</Td>
-                      <Td>{item.number}</Td>
+                      <Td>{item.rating}</Td>
                       <Td>{item.description}</Td>
                       <Td>
                         <Button
