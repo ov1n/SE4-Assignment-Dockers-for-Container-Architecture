@@ -62,7 +62,7 @@ const Shop = () => {
             <h1 class="banner__title">COFFEE HOUSE</h1>
             <p class="banner__text">Let's talk coffee</p>
             <a href="/manage" class="btn btn--opacity">
-              SHOP
+              Manage Products
             </a>
           </div>
           <img
