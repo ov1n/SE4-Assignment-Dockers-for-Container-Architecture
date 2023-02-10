@@ -220,7 +220,7 @@ TYPE OF COFFEE
 }
 
 .coffee {
-    padding: 0 25px;
+    padding: 0 15px;
 }
 
 .coffee__name {
@@ -248,7 +248,6 @@ TYPE OF COFFEE
 2 HALF SECTION 
 ---------------------------------*/
 .half-sect__second {
-    background-image: url('http://image.ibb.co/c339Yb/section_bg_9.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -267,7 +266,9 @@ TYPE OF COFFEE
 }
 
 .description__p {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .description__title {
