@@ -2,7 +2,8 @@ import axios from "axios";
 
 export class CoffeeApi{
     constructor(){
-        this.url = "https://localhost:44335/api/coffee";
+        // this.url = "https://localhost:44335/api/coffee";//use this url for the local api
+        this.url = "https://localhost:1337/api/coffee"; //use this url for the container api
     }
 
     async getCoffeeData(){
