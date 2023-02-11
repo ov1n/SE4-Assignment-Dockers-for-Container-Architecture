@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from "./logo.svg";
 import "./App.css";
 import Shop from "./components/Shop";
-import Product from "./components/Product";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ManageShop from "./components/ManageShop";
+import AddCoffee from './components/AddCoffee';
 
 export default function App() {
   return (
@@ -12,7 +11,8 @@ export default function App() {
       <div>
         <Routes>
           <Route path="/" element={<Shop />} />{" "}
-          <Route path="/manage" element={<ManageShop />} />{" "}
+          <Route path="/product" element={<ManageShop />} />{" "}
+          <Route path="/product/add" element={<AddCoffee />} />{" "}
         </Routes>{" "}
       </div>{" "}
     </div>

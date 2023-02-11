@@ -12,9 +12,6 @@ import {
 import { Button } from "@chakra-ui/react";
 import { FaEdit } from "react-icons/fa";
 import { MdOutlineDelete } from "react-icons/md";
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
-import { Heading } from "@chakra-ui/react";
-import { Flex, Spacer } from "@chakra-ui/react";
 
 const CoffeeData = ({ data }) => {
   return (
@@ -26,25 +23,25 @@ const CoffeeData = ({ data }) => {
             "url('https://images.pexels.com/photos/3262277/pexels-photo-3262277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
         }}
       >
-        <div class="banner__overlay">
-          <div class="banner__container">
-            <h1 class="banner__title">COFFEE HOUSE PRODUCTS</h1>
-            <p class="banner__text">Add your new coffee idea</p>
-            <a href="#" class="btn btn--opacity">
+        <div className="banner__overlay">
+          <div className="banner__container">
+            <h1 className="banner__title">COFFEE HOUSE PRODUCTS</h1>
+            <p className="banner__text">Add your new coffee idea</p>
+            <a href="/product/add" className="btn btn--opacity">
               Add Product
             </a>
           </div>
         </div>
       </div>
 
-      <div class="sect sect--type">
-        <div class="">
-          <div class="row--center">
-            <div class="col-md-5 col-xs-8 col-sm-6 col--inbl">
-              <h1 class="sect__title">List of Coffee Variants</h1>
+      <div className="sect sect--type">
+        <div className="">
+          <div className="row--center">
+            <div className="col-md-5 col-xs-8 col-sm-6 col--inbl">
+              <h1 className="sect__title">List of Coffee Variants</h1>
             </div>
           </div>
-          <div class="row row--small row--margin row--center">
+          <div className="row row--small row--margin row--center">
             <TableContainer className=' w-full'>
               <Table variant="simple">
                 <TableCaption>Coffee Mania by 4th Years - 2023</TableCaption>
@@ -86,14 +83,14 @@ const CoffeeData = ({ data }) => {
         </div>
       </div>
 
-      <div class="sect sect--brown sect--no-bottom">
-        <div class="">
-          <div class="row--center">
-            <div class="col-md-5 col-sm-6 col--inbl mb-4">
-              <h1 class="sect__title sect--white-text">
+      <div className="sect sect--brown sect--no-bottom">
+        <div className="">
+          <div className="row--center">
+            <div className="col-md-5 col-sm-6 col--inbl mb-4">
+              <h1 className="sect__title sect--white-text">
                 Let's talk coffee Story
               </h1>
-              <p class="sect__subtitle sect--white-text mb-4">
+              <p className="sect__subtitle sect--white-text mb-4">
                 Whether you're searching for something new to warm your mug,
                 seeking the best brew method for your favorite blend or
                 exploring our rarest offerings, you’ve come to the right place.
