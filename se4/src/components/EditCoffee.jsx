@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
     FormControl,
     FormLabel,
@@ -10,6 +10,8 @@ import { Input, Select } from "@chakra-ui/react";
 import coffeeApi from "../Services/CoffeeApi";
 
 const EditCoffee = () => {
+
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -19,7 +21,7 @@ const EditCoffee = () => {
     const onSubmit = (data) => {
         console.log(data);
         coffeeApi.updateCoffeeById(data).then(() => {
-            //do what ever you like after sucessfull update api call 
+            navigate("../../product")
         })
         // methent axios dapn 
         // call the update update api endpoint 
@@ -33,12 +35,13 @@ const EditCoffee = () => {
             // call the get api endpoint
             coffeeApi.getCoffeeById(id).then((data) => {
                 //eg: setValue('decription',data.description)
-                setValue('description', 'new description')
-                setValue('name', 'new name')
-                setValue('rate', 5)
-                setValue('price', 20.00)
-                setValue('url', 'new image link')
-            })
+                setValue('id', data.id)
+                setValue('description', data.description)
+                setValue('name', data.name)
+                setValue('rate', data.rate)
+                setValue('price', data.price)
+                setValue('type', data.type)
+            }, (error) => {console.error(error)})
 
 
 

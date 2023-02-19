@@ -20,8 +20,10 @@ const CoffeeData = ({ data }) => {
   console.log(data)}, []);
   
   const deleteCoffee = (id) => {
+    console.log(id,coffee_data);
     const updatedData = data.filter((item) => item.id !== id);
     setCoffeeData(updatedData);
+    console.log(updatedData);
   }
   
   return (
@@ -65,7 +67,7 @@ const CoffeeData = ({ data }) => {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  {data.map((item, index) => (
+                  {coffee_data.map((item, index) => (
                     <Tr key={index}>
                       <Td>{item.name}</Td>
                       <Td>{item.rating}</Td>
