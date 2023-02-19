@@ -1,53 +1,7 @@
 import React from "react";
-
+import coffee from '../data.js'
 const Shop = () => {
-  const coffee = [
-    {
-      id: 1,
-      name: "Espresso",
-      description:
-        "It is known for its rich, intense flavor and is a key ingredient in many popular coffee drinks, such as lattes and cappuccinos.",
-      price: 950.0,
-      rating: 4,
-      url: "https://image.ibb.co/bKy6Db/coffee_item_2.png",
-    },
-    {
-      id: 1,
-      name: "Espresso",
-      description:
-        "It is known for its rich, intense flavor and is a key ingredient in many popular coffee drinks, such as lattes and cappuccinos.",
-      price: 950.0,
-      rating: 4,
-      url: "https://image.ibb.co/bKy6Db/coffee_item_2.png",
-    },
-    {
-      id: 1,
-      name: "Espresso",
-      description:
-        "It is known for its rich, intense flavor and is a key ingredient in many popular coffee drinks, such as lattes and cappuccinos.",
-      price: 950.0,
-      rating: 4,
-      url: "https://image.ibb.co/bKy6Db/coffee_item_2.png",
-    },
-    {
-      id: 1,
-      name: "Espresso",
-      description:
-        "It is known for its rich, intense flavor and is a key ingredient in many popular coffee drinks, such as lattes and cappuccinos.",
-      price: 950.0,
-      rating: 4,
-      url: "https://image.ibb.co/bKy6Db/coffee_item_2.png",
-    },
-    {
-      id: 1,
-      name: "Espresso",
-      description:
-        "It is known for its rich, intense flavor and is a key ingredient in many popular coffee drinks, such as lattes and cappuccinos.",
-      price: 950.0,
-      rating: 4,
-      url: "https://image.ibb.co/bKy6Db/coffee_item_2.png",
-    },
-  ];
+
   return (
     <div className=" w-full">
       <div

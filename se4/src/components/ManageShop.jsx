@@ -1,13 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import CoffeeData from "./CoffeeData";
-import coffeeApi, {CoffeeApi} from "../Services/CoffeeApi";
-
-const data = [
-    {name: "Latte", number: 5.3, description: "test test"},
-    {name: "Expresso", number: 6.1, description: "aaa aaa"},
-    {name: "Americano", number: 1.2, description: "huu huu"},
-    {name: "Cappuccino", number: 9.2, description: "hee hee"},
-];
+import coffeeApi, { CoffeeApi } from "../Services/CoffeeApi";
+import coffee from '../data'
 
 const ManageShop = () => {
     const [state, setState] = useState([]);
@@ -22,7 +16,7 @@ const ManageShop = () => {
 
     return (
         <div>
-            <CoffeeData data={state}/>
+            <CoffeeData data={coffee} />
         </div>
     );
 };
