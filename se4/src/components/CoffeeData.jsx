@@ -1,4 +1,4 @@
-import React, {useEffect, useState}  from "react";
+import React, { useEffect, useState } from "react";
 import {
   Table,
   Thead,
@@ -15,17 +15,19 @@ import { MdOutlineDelete } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 
 const CoffeeData = ({ data }) => {
-  const [coffee_data,setCoffeeData] = useState([]);
-  useEffect(() => {setCoffeeData(data)
-  console.log(data)}, []);
-  
+  const [coffee_data, setCoffeeData] = useState([]);
+  useEffect(() => {
+    setCoffeeData(data);
+    console.log(data);
+  }, [data]);
+
   const deleteCoffee = (id) => {
-    console.log(id,coffee_data);
+    console.log(id, coffee_data);
     const updatedData = data.filter((item) => item.id !== id);
     setCoffeeData(updatedData);
     console.log(updatedData);
-  }
-  
+  };
+
   return (
     <div>
       <div
@@ -55,13 +57,26 @@ const CoffeeData = ({ data }) => {
           </div>
           <div className="row row--small row--margin row--center">
             <TableContainer className=" w-full">
-              <Table variant="simple">
+              <Table
+                variant="simple"
+                style={{
+                  borderCollapse: "collapse",
+                }}
+              >
                 <TableCaption>Coffee Mania by 4th Years - 2023</TableCaption>
                 <Thead>
                   <Tr>
                     <Th>Coffee Name</Th>
                     <Th>Rating</Th>
-                    <Th>Description</Th>
+                    <Th
+                      style={{
+                        wordWrap: "break-word",
+                        maxWidth: "300px",
+                        whiteSpace: "pre-wrap",
+                      }}
+                    >
+                      Description
+                    </Th>
                     <Th>Edit</Th>
                     <Th>Delete</Th>
                   </Tr>
@@ -71,7 +86,15 @@ const CoffeeData = ({ data }) => {
                     <Tr key={index}>
                       <Td>{item.name}</Td>
                       <Td>{item.rating}</Td>
-                      <Td>{item.description}</Td>
+                      <Td
+                        style={{
+                          wordWrap: "break-word",
+                          maxWidth: "300px",
+                          whiteSpace: "pre-wrap",
+                        }}
+                      >
+                        {item.description}
+                      </Td>
                       <Td>
                         <Link
                           to={`/product/edit/${item.id}`}
@@ -81,7 +104,10 @@ const CoffeeData = ({ data }) => {
                         </Link>
                       </Td>
                       <Td>
-                        <Button onClick={()=>{deleteCoffee(item.id)}}
+                        <Button
+                          onClick={() => {
+                            deleteCoffee(item.id);
+                          }}
                           leftIcon={<MdOutlineDelete />}
                           colorScheme="red"
                           variant="solid"
