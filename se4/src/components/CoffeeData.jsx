@@ -12,6 +12,7 @@ import {
 import { Button } from "@chakra-ui/react";
 import { FaEdit } from "react-icons/fa";
 import { MdOutlineDelete } from "react-icons/md";
+import { Link, useParams } from "react-router-dom";
 
 const CoffeeData = ({ data }) => {
   const [coffee_data,setCoffeeData] = useState([]);
@@ -51,7 +52,7 @@ const CoffeeData = ({ data }) => {
             </div>
           </div>
           <div className="row row--small row--margin row--center">
-            <TableContainer className=' w-full'>
+            <TableContainer className=" w-full">
               <Table variant="simple">
                 <TableCaption>Coffee Mania by 4th Years - 2023</TableCaption>
                 <Thead>
@@ -70,11 +71,12 @@ const CoffeeData = ({ data }) => {
                       <Td>{item.rating}</Td>
                       <Td>{item.description}</Td>
                       <Td>
-                        <Button
-                          leftIcon={<FaEdit />}
-                          colorScheme="green"
-                          variant="solid"
-                        ></Button>
+                        <Link
+                          to={`/product/edit/${item.id}`}
+                          className="btn btn--opacity"
+                        >
+                          Edit
+                        </Link>
                       </Td>
                       <Td>
                         <Button onClick={()=>{deleteCoffee(item.id)}}
