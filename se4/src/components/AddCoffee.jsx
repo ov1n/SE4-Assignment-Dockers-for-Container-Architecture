@@ -6,6 +6,7 @@ import {
   FormHelperText,
 } from "@chakra-ui/react";
 import { Input, Select } from "@chakra-ui/react";
+import CoffeeApi from "../Services/CoffeeApi";
 const AddCoffee = () => {
   const {
     register,
@@ -15,7 +16,7 @@ const AddCoffee = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    // methent axios dapn
+    CoffeeApi.addCoffeeData(data);
   };
 
   return (
@@ -79,6 +80,19 @@ const AddCoffee = () => {
               </FormControl>
 
               <FormControl>
+                <FormLabel>Type</FormLabel>
+                <Input
+                  type="text"
+                  borderColor="black"
+                  defaultValue=""
+                  {...register("type")}
+                />
+                <FormHelperText>
+                  {errors.type && <span>This field is required</span>}
+                </FormHelperText>
+              </FormControl>
+              
+              {/* <FormControl>
                 <FormLabel>Image URL</FormLabel>
                 <Input
                   type="text"
@@ -89,7 +103,7 @@ const AddCoffee = () => {
                 <FormHelperText>
                   {errors.url && <span>This field is required</span>}
                 </FormHelperText>
-              </FormControl>
+              </FormControl> */}
 
               <input type="submit" className="btn btn--opacity" />
             </form>
