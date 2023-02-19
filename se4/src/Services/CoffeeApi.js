@@ -18,12 +18,11 @@ export class CoffeeApi{
         console.log(data)
         try {
           const response = await axios.post(this.url, {
-            headers: {"Content-Type": "application/json"}},{
             name: data.name,
             description: data.description,
-            price: data.price,
+            price: Number(data.price),
             type: data.type,
-            rating: data.rating,
+            rating: Number(data.rating),
           });
           console.log(response.data);
         } catch (error) {
@@ -37,9 +36,9 @@ export class CoffeeApi{
           const response = await axios.put(`${this.url}/${data.id}`, {
             name: data.name,
             description: data.description,
-            price: data.price,
+            price: Number(data.price),
             type: data.type,
-            rating: data.rating,
+            rating: Number(data.rating),
           });
           console.log(response.data);
         } catch (error) {
