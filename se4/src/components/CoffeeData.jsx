@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState}  from "react";
 import {
   Table,
   Thead,
@@ -14,6 +14,15 @@ import { FaEdit } from "react-icons/fa";
 import { MdOutlineDelete } from "react-icons/md";
 
 const CoffeeData = ({ data }) => {
+  const [coffee_data,setCoffeeData] = useState([]);
+  useEffect(() => {setCoffeeData(data)
+  console.log(data)}, []);
+  
+  const deleteCoffee = (id) => {
+    const updatedData = data.filter((item) => item.id !== id);
+    setCoffeeData(updatedData);
+  }
+  
   return (
     <div>
       <div
@@ -68,7 +77,7 @@ const CoffeeData = ({ data }) => {
                         ></Button>
                       </Td>
                       <Td>
-                        <Button
+                        <Button onClick={()=>{deleteCoffee(item.id)}}
                           leftIcon={<MdOutlineDelete />}
                           colorScheme="red"
                           variant="solid"

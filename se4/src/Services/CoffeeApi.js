@@ -44,7 +44,8 @@ export class CoffeeApi{
         } catch (error) {
           console.error(error);
         }
-      }
+    }
+        
 }
 
 export default new CoffeeApi();
