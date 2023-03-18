@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "058d5079-3152-4da5-98e8-8e46e41e5ee5",
+		"name": "Cofee-Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15473981"
+	},
+	"item": [
+		{
+			"name": "http://localhost:1337/api/employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1337/api/coffee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/coffee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"coffee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1337/api/coffee/a5ef22d6-ed6c-4989-9068-b0239cedcc6f",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/coffee/a5ef22d6-ed6c-4989-9068-b0239cedcc6f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"coffee",
+						"a5ef22d6-ed6c-4989-9068-b0239cedcc6f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1337/api/coffee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Cappuccino-test-1\",\r\n    \"description\": \"A coffee drink made with equal parts espresso, steamed milk and milk foam.\",\r\n    \"price\": 450,\r\n    \"type\": null,\r\n    \"rating\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/coffee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"coffee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1337/api/coffee/a5ef22d6-ed6c-4989-9068-b0239cedcc6f",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"a5ef22d6-ed6c-4989-9068-b0239cedcc6f\",\r\n    \"name\": \"Latte-Update\",\r\n    \"description\": \" A coffee beverage made with espresso and steamed milk, topped with a small amount of foam. \",\r\n    \"price\": 550,\r\n    \"type\": null,\r\n    \"rating\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/coffee/a5ef22d6-ed6c-4989-9068-b0239cedcc6f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"coffee",
+						"a5ef22d6-ed6c-4989-9068-b0239cedcc6f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
